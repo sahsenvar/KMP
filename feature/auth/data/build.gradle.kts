@@ -7,7 +7,7 @@ plugins {
 
 kotlin {
     cocoapods {
-        name = path.replace(':', '.').drop(1)
+        name = "authData"
         summary = "Some description for the Shared Module"
         homepage = "Link to the Shared Module homepage"
         version = "1.0"
@@ -15,7 +15,7 @@ kotlin {
         ios.deploymentTarget = "16.0"
         podfile = rootProject.file("iosApp/Podfile")
         framework {
-            baseName = path.replace(':', '.').drop(1)
+            baseName = "authData"
             isStatic = true
         }
     }
