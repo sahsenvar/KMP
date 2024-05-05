@@ -9,3 +9,9 @@ captures
 local.properties
 *.podspec
 xcuserdata
+/iosApp/Pods/Target Support Files/local/local.debug.xcconfig
+/iosApp/Pods/Local Podspecs/local.podspec.json
+/iosApp/Pods/Target Support Files/local/local.release.xcconfig
+/iosApp/Pods/Target Support Files/remote/remote.debug.xcconfig
+/iosApp/Pods/Local Podspecs/remote.podspec.json
+/iosApp/Pods/Target Support Files/remote/remote.release.xcconfig
