@@ -1,16 +1,26 @@
 PODS:
+  - local (1.0)
+  - remote (1.0)
   - shared (1.0)
 
 DEPENDENCIES:
+  - local (from `../core/local`)
+  - remote (from `../core/remote`)
   - shared (from `../shared`)
 
 EXTERNAL SOURCES:
+  local:
+    :path: "../core/local"
+  remote:
+    :path: "../core/remote"
   shared:
     :path: "../shared"
 
 SPEC CHECKSUMS:
+  local: 168d48bb34e9db67fa83c02764953c27352d194c
+  remote: bf4931ef1f329d89cbb57e61fb16dbdb47007633
   shared: c133c49697085ba65e4031b78e671fc97617a40d
 
-PODFILE CHECKSUM: 78d6cc1b71b232202c48a29d4e6c34972c534c73
+PODFILE CHECKSUM: cffc3022fde8c0ad5c8684e019fa50a452f399da
 
 COCOAPODS: 1.15.2

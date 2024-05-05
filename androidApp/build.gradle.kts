@@ -4,10 +4,10 @@ plugins {
 }
 
 android {
-    namespace = "com.sahansenvar.kmp.android"
+    namespace = getNameSpace(project = project)
     compileSdk = 34
     defaultConfig {
-        applicationId = "com.sahansenvar.kmp.android"
+        applicationId = getNameSpace(project = project)
         minSdk = 26
         targetSdk = 34
         versionCode = 1
