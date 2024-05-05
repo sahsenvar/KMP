@@ -7,6 +7,7 @@ plugins {
 
 kotlin {
     cocoapods {
+        name = project.name
         summary = "Some description for the Shared Module"
         homepage = "Link to the Shared Module homepage"
         version = "1.0"
@@ -14,7 +15,7 @@ kotlin {
         ios.deploymentTarget = "16.0"
         podfile = rootProject.file("iosApp/Podfile")
         framework {
-            baseName = "local"
+            baseName = project.name
             isStatic = true
         }
     }
