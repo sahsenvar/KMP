@@ -1,0 +1,4 @@
+package markers
+
+interface CoreService {
+}
