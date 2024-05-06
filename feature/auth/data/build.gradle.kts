@@ -1,4 +1,5 @@
-apply(from = rootProject.file("base-gradle.gradle"))
+apply(from = rootProject.file("base.gradle"))
+apply(from = rootProject.file("base-data.gradle"))
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.kotlinCocoapods)
