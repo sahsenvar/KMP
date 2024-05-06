@@ -22,7 +22,12 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            //put your multiplatform dependencies here
+            implementation(project(":core:remote"))
+            implementation(project(":core:local"))
+            implementation(project(":core:memory"))
+            implementation(project(":core:validation"))
+
+            implementation(project(":feature:auth:domain"))
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -31,3 +36,6 @@ kotlin {
 }
 
 android.namespace = getNameSpace(project = project)
+dependencies {
+    implementation(project(":core:memory"))
+}

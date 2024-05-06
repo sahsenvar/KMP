@@ -22,7 +22,7 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            //put your multiplatform dependencies here
+            implementation(project(":feature:auth:domain"))
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
