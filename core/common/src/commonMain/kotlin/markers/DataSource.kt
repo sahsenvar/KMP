@@ -1,0 +1,3 @@
+package markers
+
+interface DataSource
