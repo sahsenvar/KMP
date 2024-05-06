@@ -1,6 +1,8 @@
 package useCases
 
-class TryLoginUseCase(
+import repositories.LoginRepository
 
+class TryLoginUseCase(
+    private val loginRepository: LoginRepository
 ) {
 }
