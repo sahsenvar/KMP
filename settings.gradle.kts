@@ -19,7 +19,10 @@ dependencyResolutionManagement {
     }
 }
 
-include(":androidApp")
+include(
+    ":androidApp:app",
+    ":androidApp:feature"
+)
 include(":shared")
 
 // |========================| Core Modules |========================|
