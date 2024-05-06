@@ -1,6 +1,8 @@
 package useCases
 
-class GetBackgroundImageUseCase(
+import repositories.LoginRepository
 
+class GetBackgroundImageUseCase(
+    private val loginRepository: LoginRepository
 ) {
 }
