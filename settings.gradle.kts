@@ -25,7 +25,7 @@ include(
 )
 include(":shared")
 
-// |========================| Core Modules |========================|
+// <========================| Core Modules |========================>
 include(
     ":core:common",
     ":core:remote",
@@ -34,21 +34,21 @@ include(
     ":core:validation",
 )
 
-// |========================| Splash Modules |========================|
+// <========================| Splash Modules |========================>
 include(
     ":feature:splash:data",
     ":feature:splash:domain",
     ":feature:splash:presentation",
 )
 
-// |========================| Auth Modules |========================|
+// <========================| Auth Modules |========================>
 include(
     ":feature:auth:data",
     ":feature:auth:domain",
     ":feature:auth:presentation",
 )
 
-// |========================| Home Modules |========================|
+// <========================| Home Modules |========================>
 include(
     ":feature:home:data",
     ":feature:home:domain",
