@@ -1,0 +1,6 @@
+package useCases
+
+class TryLoginUseCase(
+
+) {
+}
