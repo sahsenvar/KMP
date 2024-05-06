@@ -21,23 +21,33 @@ dependencyResolutionManagement {
 
 include(":androidApp")
 include(":shared")
+
+// |========================| Core Modules |========================|
 include(
+    ":core:common",
     ":core:remote",
-    ":core:local"
+    ":core:local",
+    ":core:memory",
+    ":core:validation",
 )
 
+// |========================| Splash Modules |========================|
+include(
+    ":feature:splash:data",
+    ":feature:splash:domain",
+    ":feature:splash:presentation",
+)
+
+// |========================| Auth Modules |========================|
 include(
     ":feature:auth:data",
     ":feature:auth:domain",
     ":feature:auth:presentation",
 )
+
+// |========================| Home Modules |========================|
 include(
     ":feature:home:data",
     ":feature:home:domain",
     ":feature:home:presentation",
-)
-include(
-    ":feature:splash:data",
-    ":feature:splash:domain",
-    ":feature:splash:presentation",
 )
