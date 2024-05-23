@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.kotlinCocoapods)
     alias(libs.plugins.androidLibrary)
+    id("kotlin-parcelize")
+    alias(libs.plugins.composePlugin)
 }
 
 kotlin {
@@ -20,13 +22,32 @@ kotlin {
     }
 
     sourceSets {
-        commonMain.dependencies {
+
+        androidMain.dependencies {
 
         }
+        commonMain.dependencies {
+
+            implementation(compose.runtime)
+            implementation(compose.foundation)
+            implementation(compose.material)
+            implementation(compose.ui)
+            implementation(compose.components.resources)
+            implementation(compose.components.uiToolingPreview)
+
+            implementation("androidx.lifecycle:lifecycle-viewmodel:2.8.0-rc01")
+
+            implementation(libs.navigation.core)
+            implementation(libs.navigation.lifecycle)
+            implementation(libs.navigation.extention)
+            implementation(libs.navigation.stateKeeper)
+            implementation(libs.navigation.parcelize)
+        }
+
         commonTest.dependencies {
 
         }
     }
 }
 
-android.namespace = getNameSpace(project = project)
+android.namespace = getNameSpace(project)

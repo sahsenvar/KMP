@@ -1,0 +1,16 @@
+kotlin {
+    sourceSets {
+        androidMain.dependencies {
+
+        }
+
+        commonMain.dependencies {
+            implementation(project(":core:common"))
+            implementation("androidx.lifecycle:lifecycle-viewmodel:2.8.0-rc01")
+        }
+
+        commonTest.dependencies{
+
+        }
+    }
+}

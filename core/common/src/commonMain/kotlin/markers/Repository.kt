@@ -1,4 +1,0 @@
-package markers
-
-interface Repository {
-}

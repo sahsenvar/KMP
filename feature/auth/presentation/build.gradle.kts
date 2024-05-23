@@ -4,6 +4,9 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.kotlinCocoapods)
     alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.composePlugin)
+    alias(libs.plugins.kotlinSerialization)
+
 }
 
 kotlin {
@@ -23,10 +26,25 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            implementation(project(":feature:auth:domain"))
+            //Modules
+            implementation(projects.feature.auth.domain)
+            implementation(projects.core.navigation)
+            implementation(projects.core.validation)
+
+            //Libraries
+            implementation(compose.runtime)
+            implementation(compose.foundation)
+            implementation(compose.material)
+            implementation(compose.ui)
+            implementation(compose.components.resources)
+            implementation(compose.components.uiToolingPreview)
+            implementation(libs.kotlin.serialization)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
+        }
+        androidMain.dependencies {
+            implementation("androidx.compose.runtime:runtime:1.6.7")
         }
     }
 }

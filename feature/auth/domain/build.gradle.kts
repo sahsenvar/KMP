@@ -12,7 +12,7 @@ kotlin {
         summary = "Some description for the Shared Module"
         homepage = "Link to the Shared Module homepage"
         version = "1.0"
-        group = getNameSpace(project = project)
+        group = getNameSpace(project)
         ios.deploymentTarget = "16.0"
         podfile = rootProject.file("iosApp/Podfile")
         framework {
@@ -23,7 +23,8 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            //put your multiplatform dependencies here
+            implementation(projects.core.validation)
+            implementation(libs.coroutines.core)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -31,4 +32,4 @@ kotlin {
     }
 }
 
-android.namespace = getNameSpace(project = project)
+android.namespace = getNameSpace(project)

@@ -3,7 +3,10 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.kotlinCocoapods)
     alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.skie)
+
 }
+
 
 kotlin {
     cocoapods {
@@ -21,12 +24,15 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            //put your multiplatform dependencies here
+            implementation(libs.coroutines.core)
+            implementation("io.ktor:ktor-client-core:2.3.10")
+            implementation(projects.core.common)
         }
         commonTest.dependencies {
 
         }
     }
 }
+
 
 android.namespace = getNameSpace(project = project)

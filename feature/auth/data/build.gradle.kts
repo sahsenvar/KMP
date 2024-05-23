@@ -23,12 +23,11 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            implementation(project(":core:remote"))
-            implementation(project(":core:local"))
-            implementation(project(":core:memory"))
-            implementation(project(":core:validation"))
-
-            implementation(project(":feature:auth:domain"))
+            implementation(projects.core.remote)
+            implementation(projects.core.local)
+            implementation(projects.core.memory)
+            implementation(projects.core.validation)
+            implementation(projects.feature.auth.domain)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -37,6 +36,3 @@ kotlin {
 }
 
 android.namespace = getNameSpace(project = project)
-dependencies {
-    implementation(project(":core:memory"))
-}

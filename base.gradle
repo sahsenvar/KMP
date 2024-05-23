@@ -2,7 +2,7 @@ kotlin {
     androidTarget {
         compilations.all {
             kotlinOptions {
-                jvmTarget = "1.8"
+                jvmTarget = "11"
             }
         }
     }
@@ -11,11 +11,15 @@ kotlin {
     iosSimulatorArm64()
 
     sourceSets {
+        androidMain.dependencies{
+            implementation("io.insert-koin:koin-androidx-compose:3.5.6")
+        }
         commonMain.dependencies {
-            implementation(project(":core:common"))
+            implementation("io.insert-koin:koin-core:3.5.6")
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
+            implementation("io.insert-koin:koin-test:3.5.6")
         }
     }
 }

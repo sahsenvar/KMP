@@ -21,7 +21,8 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-
+            implementation("io.github.luca992.libphonenumber-kotlin:libphonenumber:0.1.1")
+            implementation(projects.core.common)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -30,3 +31,6 @@ kotlin {
 }
 
 android.namespace = getNameSpace(project = project)
+dependencies {
+    implementation("org.jetbrains:annotations:15.0")
+}

@@ -19,19 +19,22 @@ dependencyResolutionManagement {
     }
 }
 
-include(
-    ":androidApp:app",
-    ":androidApp:feature"
-)
-include(":shared")
+
 
 // <========================| Core Modules |========================>
 include(
     ":core:common",
+    ":core:navigation",
     ":core:remote",
     ":core:local",
     ":core:memory",
     ":core:validation",
+    ":core:injection",
+)
+
+// <========================| Compose Application Modules |========================>
+include(
+    ":composeApp",
 )
 
 // <========================| Splash Modules |========================>

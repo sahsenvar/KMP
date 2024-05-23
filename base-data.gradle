@@ -1,0 +1,14 @@
+kotlin {
+    sourceSets {
+        androidMain.dependencies {
+        }
+
+        commonMain.dependencies {
+            implementation(project(":core:common"))
+        }
+
+        commonTest.dependencies{
+
+        }
+    }
+}
